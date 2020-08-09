@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myProject';
+  name: string;
+
+  callNiku(): void {
+      this.name = 'niku';
+  }
+
+  callAndres() : void {
+      this.name = 'andres';
+  }
 }
