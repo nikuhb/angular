@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/service-catalog/service-catalog.module').then(m => m.ServiceCatalogModule)
   },
   {
+    path: 'customer-billing',
+    loadChildren: () => import('./modules/customer-billing/customer-billing.module'). then(m => m.CustomerBillingModule)
+  },
+  {
     path: '',
     redirectTo: 'Home',
     pathMatch: 'full',
