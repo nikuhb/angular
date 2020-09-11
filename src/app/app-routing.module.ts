@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { throwError } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -24,8 +23,16 @@ const routes: Routes = [
     loadChildren: () => import('./modules/provisioning/provisioning.module'). then(m => m.ProvisioningRoutingModule)
   },
   {
+    path: 'applications',
+    loadChildren: () => import('./modules/applications/applications.module'). then(m => m.ApplicationsModule)
+  },
+  {
     path: 'domain-registration',
     loadChildren: () => import('./modules/domain-registration/domain-registration.module'). then(m => m.DomainRegistrationModule)
+  },
+  {
+    path: 'reports',
+    loadChildren: () => import('./modules/reports/reports.module'). then(m => m.ReportsModule)
   },
   {
     path: '',
