@@ -20,23 +20,27 @@ const routes: Routes = [
   },
   {
     path: 'provisioning',
-    loadChildren: () => import('./modules/provisioning/provisioning.module'). then(m => m.ProvisioningModule)
+    loadChildren: () => import('./modules/provisioning/provisioning.module').then(m => m.ProvisioningModule)
   },
   {
     path: 'applications',
-    loadChildren: () => import('./modules/applications/applications.module'). then(m => m.ApplicationsModule)
+    loadChildren: () => import('./modules/applications/applications.module').then(m => m.ApplicationsModule)
   },
   {
     path: 'domain-registration',
-    loadChildren: () => import('./modules/domain-registration/domain-registration.module'). then(m => m.DomainRegistrationModule)
+    loadChildren: () => import('./modules/domain-registration/domain-registration.module').then(m => m.DomainRegistrationModule)
   },
   {
     path: 'reports',
-    loadChildren: () => import('./modules/reports/reports.module'). then(m => m.ReportsModule)
+    loadChildren: () => import('./modules/reports/reports.module').then(m => m.ReportsModule)
   },
   {
     path: 'help',
-    loadChildren: () => import('./modules/help/help.module'). then( m => m.HelpModule)
+    loadChildren: () => import('./modules/help/help.module').then( m => m.HelpModule)
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./modules/account/account.module').then( m => m.AccountModule)
   },
   {
     path: '',
