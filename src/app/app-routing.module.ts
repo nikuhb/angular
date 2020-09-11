@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'Home',
+    path: 'home',
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'provisioning',
-    loadChildren: () => import('./modules/provisioning/provisioning.module'). then(m => m.ProvisioningRoutingModule)
+    loadChildren: () => import('./modules/provisioning/provisioning.module'). then(m => m.ProvisioningModule)
   },
   {
     path: 'applications',

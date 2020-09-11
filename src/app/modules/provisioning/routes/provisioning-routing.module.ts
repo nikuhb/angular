@@ -5,7 +5,7 @@ import { ProvisioningComponent } from '../components/provisioning/provisioning.c
 const routes: Routes = [
   {
     path: '',
-    component:ProvisioningComponent,
+    component: ProvisioningComponent,
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ProvisionRoutingModule { }
+export class ProvisioningRoutingModule { }

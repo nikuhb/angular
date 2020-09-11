@@ -5,7 +5,7 @@ import { ApplicationsComponent } from '../components/applications/applications.c
 const routes: Routes = [
   {
     path: '',
-    component:ApplicationsComponent
+    component: ApplicationsComponent
   }
 ];
 

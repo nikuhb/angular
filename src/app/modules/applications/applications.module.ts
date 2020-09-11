@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ApplicationsRoutingModule } from './routes/applications-routing.module';
 import { ApplicationsComponent } from './components/applications/applications.component';
 
-
-
 @NgModule({
   declarations: [ApplicationsComponent],
   imports: [

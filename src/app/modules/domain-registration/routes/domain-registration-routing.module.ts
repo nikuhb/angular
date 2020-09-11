@@ -5,7 +5,7 @@ import { DomainRegistrationComponent } from '../components/domain-registration/d
 const routes: Routes = [
   {
     path: '',
-    component:DomainRegistrationComponent
+    component: DomainRegistrationComponent
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DomainRoutingModule { }
+export class DomainRegistrationRoutingModule { }
