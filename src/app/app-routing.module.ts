@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/provisioning/provisioning.module'). then(m => m.ProvisioningRoutingModule)
   },
   {
+    path: 'domain-registration',
+    loadChildren: () => import('./modules/domain-registration/domain-registration.module'). then(m => m.DomainRegistrationModule)
+  },
+  {
     path: '',
     redirectTo: 'Home',
     pathMatch: 'full',
