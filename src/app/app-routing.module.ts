@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { throwError } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'customer-billing',
     loadChildren: () => import('./modules/customer-billing/customer-billing.module'). then(m => m.CustomerBillingModule)
+  },
+  {
+    path: 'provisioning',
+    loadChildren: () => import('./modules/provisioning/provisioning.module'). then(m => m.ProvisioningRoutingModule)
   },
   {
     path: '',
