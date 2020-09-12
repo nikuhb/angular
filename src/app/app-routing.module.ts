@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'customer-billing',
-    loadChildren: () => import('./modules/customer-billing/customer-billing.module'). then(m => m.CustomerBillingModule)
+    loadChildren: () => import('./modules/customer-billing/customer-billing.module').then(m => m.CustomerBillingModule)
   },
   {
     path: 'provisioning',
@@ -36,11 +36,11 @@ const routes: Routes = [
   },
   {
     path: 'help',
-    loadChildren: () => import('./modules/help/help.module').then( m => m.HelpModule)
+    loadChildren: () => import('./modules/help/help.module').then(m => m.HelpModule)
   },
   {
     path: 'account',
-    loadChildren: () => import('./modules/account/account.module').then( m => m.AccountModule)
+    loadChildren: () => import('./modules/account/account.module').then(m => m.AccountModule)
   },
   {
     path: '',
