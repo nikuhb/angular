@@ -10,7 +10,7 @@ import { LeftPanelComponent } from './components/left-panel/left-panel.component
   declarations: [
     AppComponent,
     MainNavBarComponent,
-    LeftPanelComponent
+    LeftPanelComponent,
   ],
   imports: [
     BrowserModule,
