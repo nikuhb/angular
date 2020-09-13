@@ -8,7 +8,13 @@ import { AccountVoucherComponent } from './components/account-voucher/account-vo
 import { AccountWishlistComponent } from './components/account-wishlist/account-wishlist.component';
 
 @NgModule({
-  declarations: [AccountComponent, AccountOrderComponent, AccountPersonalInformationComponent, AccountVoucherComponent, AccountWishlistComponent],
+  declarations: [
+    AccountComponent,
+    AccountOrderComponent,
+    AccountPersonalInformationComponent,
+    AccountVoucherComponent,
+    AccountWishlistComponent,
+  ],
   imports: [
     CommonModule,
     AccountRoutingModule,
