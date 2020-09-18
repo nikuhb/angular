@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { IUser } from 'src/app/models/account.model';
+import { AccountService } from '../../services/account.service';
 
 @Component({
   selector: 'app-main-nav-bar',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavBarComponent implements OnInit {
 
-  constructor() { }
+  currentUser: BehaviorSubject<IUser>;
+
+  constructor(
+  private accountService: AccountService,
+  ) {
+    this.currentUser = accountService.currentUser;
+  }
 
   ngOnInit(): void {
+
   }
 
 }
+

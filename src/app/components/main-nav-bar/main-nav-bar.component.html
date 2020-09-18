@@ -1,16 +1,19 @@
 <nav class="navbar text-light bg-dark">
   <a class="navbar-brand" href="http://www.google.com">habibi</a>
-  <div class="dropdown show">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Niku Habibi
-      <i class="fas fa-user"></i></a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" routerLink="/account">my account</a>
-      <a class="dropdown-item" routerLink="/account/order">my order</a>
-      <a class="dropdown-item" routerLink="/account/personal-information">my personal information</a>
-      <a class="dropdown-item" routerLink="/account/voucher">my voucher</a>
-      <a class="dropdown-item" routerLink="/account/wishlist">my wishlist</a>
-      <a class="dropdown-item" routerLink="/account">sign out</a>
+  <ng-container *ngIf="(currentUser | async)">
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ (currentUser | async).userName  }}
+        <i class="fas fa-user"></i></a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" routerLink="/account">my account</a>
+        <a class="dropdown-item" routerLink="/account/order">my order</a>
+        <a class="dropdown-item" routerLink="/account/personal-information">my personal information</a>
+        <a class="dropdown-item" routerLink="/account/voucher">my voucher</a>
+        <a class="dropdown-item" routerLink="/account/wishlist">my wishlist</a>
+        <a class="dropdown-item" routerLink="/account">sign out</a>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </nav>
+
