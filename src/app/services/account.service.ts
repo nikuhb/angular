@@ -10,7 +10,7 @@ export class AccountService {
   currentUser: BehaviorSubject<IUser> = new BehaviorSubject (undefined);
 
   constructor() {
-    this.currentUser.next(UserList[1]);
+    this.currentUser.next(UserList[0]);
   }
 
   logOut(): void {

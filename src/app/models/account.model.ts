@@ -2,7 +2,7 @@ export interface IUser {
   firstName: string;
   lastName: string;
   password: string;
-  profilePicture: string;
+  profilePicture?: string;
   userName: string;
 }
 
@@ -11,7 +11,7 @@ export const UserList: IUser[] = [
     firstName: 'Amir',
     lastName: 'Habibi',
     password: 'amir123456',
-    profilePicture: 'https://generated.photos/face/neutral-white-adult-male-with-short-black-hair-and-brown-eyes--5e68893d6d3b380006f22fd9',
+    profilePicture: 'https://images.generated.photos/Xvzq5BmqHMJKwx_KnA0fqSWk4rokklEQQV5Ix0WBZ-k/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNDU1NzAuanBn.jpg',
     userName: 'amir.h',
   },
   {
@@ -25,8 +25,14 @@ export const UserList: IUser[] = [
     firstName: 'Andres',
     lastName: 'Molina',
     password: 'niku5',
-    profilePicture: 'https://generated.photos/face/neutral-asian-young-adult-male-with-short-black-hair-and-brown-eyes--5e6804e86d3b380006d48743',
+    profilePicture: 'https://images.generated.photos/UZRiwHvE4unj4XBSjKciH9lfzqYJYo25SYRpQkk7-zI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4MjY2NTMuanBn.jpg',
     userName: 'andres.m',
+  },
+  {
+    firstName: 'Hosein',
+    lastName: 'Habibi',
+    password: 'hosein12',
+    userName: 'hosein.h',
   },
 ];
 
