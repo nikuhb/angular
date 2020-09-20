@@ -34,5 +34,12 @@ export const UserList: IUser[] = [
     password: 'hosein12',
     userName: 'hosein.h',
   },
+  {
+    firstName: 'sedighe',
+    lastName: 'alavi',
+    password: 'sedighe123',
+    profilePicture: '',
+    userName: 'sedighe.a',
+  },
 ];
 
