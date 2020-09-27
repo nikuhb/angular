@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { IUser, UserList } from '../models/account.model';
 
 @Injectable({
@@ -15,6 +15,12 @@ export class AccountService {
 
   logOut(): void {
     this.currentUser.next(undefined);
+  }
+
+  login(userName: string, password: string): Observable<IUser>{
+    const users = UserList;
+    const userFounded = users.find(user => user.userName === userName && user.password);
+    return of(userFounded);
   }
 }
 
