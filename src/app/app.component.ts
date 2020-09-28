@@ -20,3 +20,4 @@ export class AppComponent {
     this.currentUser = accountService.currentUser;
   }
 }
+

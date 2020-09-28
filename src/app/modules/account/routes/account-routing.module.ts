@@ -6,31 +6,38 @@ import { AccountPersonalInformationComponent } from '../components/account-perso
 import { AccountVoucherComponent } from '../components/account-voucher/account-voucher.component';
 import { AccountWishlistComponent } from '../components/account-wishlist/account-wishlist.component';
 import { AccountLoginFormComponent } from '../components/account-login-form/account-login-form.component';
+import { AuthGuard } from '../../../guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'login',
     component: AccountLoginFormComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'order',
     component: AccountOrderComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'personal-information',
     component: AccountPersonalInformationComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'voucher',
     component: AccountVoucherComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'wishlist',
     component: AccountWishlistComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: '',
     component: AccountComponent,
+    canActivate: [AuthGuard],
   },
 ];
 
@@ -39,3 +46,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AccountRoutingModule { }
+
