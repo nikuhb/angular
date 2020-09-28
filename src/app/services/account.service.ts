@@ -10,7 +10,6 @@ export class AccountService {
   currentUser: BehaviorSubject<IUser> = new BehaviorSubject (undefined);
 
   constructor() {
-    this.currentUser.next(UserList[4]);
   }
 
   logOut(): void {
@@ -19,7 +18,8 @@ export class AccountService {
 
   login(userName: string, password: string): Observable<IUser>{
     const users = UserList;
-    const userFounded = users.find(user => user.userName === userName && user.password);
+    const userFounded = users.find(user => user.userName === userName && user.password === password);
+    this.currentUser.next(userFounded);
     return of(userFounded);
   }
 }

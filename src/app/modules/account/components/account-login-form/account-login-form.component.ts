@@ -32,8 +32,16 @@ export class AccountLoginFormComponent implements OnInit {
   }
 
   handleLogin(user: IUser): void {
-    console.log(':D' , { user });
+    if (user) {
+      console.log(':D', { user });
+    } else {
+      this.loginForm
+        .setErrors({
+          authentication: 'Invalid user'
+        });
+    }
   }
 
 }
+
 

@@ -24,8 +24,16 @@
       <button
         class="btn btn-success w-100"
         type="submit"
-        [disabled]="!loginForm.valid">login</button>
+        [disabled]="!loginForm.valid">
+        login
+      </button>
+      <ng-container  *ngIf="loginForm.touched && loginForm.hasError('authentication')">
+        <div class="alert alert-danger mt-4">
+        user and password do not match, please try again
+        </div>
+      </ng-container>
     </div>
   </div>
 </form>
+
 
