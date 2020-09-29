@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { IUser, UserList } from '../models/account.model';
 
@@ -9,7 +10,11 @@ export class AccountService {
 
   currentUser: BehaviorSubject<IUser> = new BehaviorSubject (undefined);
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
+    this.currentUser
+      .subscribe(user => this.validateUser(user));
   }
 
   logOut(): void {
@@ -22,5 +27,12 @@ export class AccountService {
     this.currentUser.next(userFounded);
     return of(userFounded);
   }
+
+  validateUser(user: IUser): void {
+    if (user) {
+      this.router.navigate(['home']);
+    }
+  }
 }
+
 

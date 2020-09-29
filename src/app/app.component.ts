@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { IUser } from './models/account.model';
+import { AccountService } from './services/account.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +12,12 @@ export class AppComponent {
   title = 'myProject';
   name: string;
 
-  callNiku(): void {
-      this.name = 'niku';
-  }
+  currentUser: BehaviorSubject<IUser>;
 
-  callAndres() : void {
-      this.name = 'andres';
+  constructor(
+    private accountService: AccountService,
+  ) {
+    this.currentUser = accountService.currentUser;
   }
 }
+
