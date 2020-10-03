@@ -12,7 +12,6 @@ const routes: Routes = [
   {
     path: 'login',
     component: AccountLoginFormComponent,
-    canActivate: [AuthGuard],
   },
   {
     path: 'order',
