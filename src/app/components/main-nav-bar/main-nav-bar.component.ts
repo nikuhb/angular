@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { IUser } from 'src/app/models/account.model';
 import { AccountService } from '../../services/account.service';
@@ -14,6 +15,7 @@ export class MainNavBarComponent implements OnInit {
 
   constructor(
   private accountService: AccountService,
+  private router: Router,
   ) {
     this.currentUser = accountService.currentUser;
   }
@@ -22,5 +24,13 @@ export class MainNavBarComponent implements OnInit {
 
   }
 
+  logOut(): void {
+    this.accountService
+      .logOut();
+
+    this.router.navigate(['account/login']);
+  }
+
 }
+
 
