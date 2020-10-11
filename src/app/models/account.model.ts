@@ -1,8 +1,11 @@
 export interface IUser {
+  address?: string;
+  age?: number;
   firstName: string;
   lastName: string;
   password: string;
   profilePicture?: string;
+  telephone?: number;
   userName: string;
 }
 

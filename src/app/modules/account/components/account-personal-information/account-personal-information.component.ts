@@ -21,9 +21,13 @@ export class AccountPersonalInformationComponent implements OnInit {
     userName: new FormControl(),
   });
 
+  profilePicture: string;
+
   constructor(
     private accountService: AccountService,
-  ) { }
+  ) {
+    this.setFormListeners();
+  }
 
   ngOnInit(): void {
     this
@@ -31,10 +35,27 @@ export class AccountPersonalInformationComponent implements OnInit {
       .currentUser
       .subscribe(currentUser => this.handleCurrentUserChange(currentUser));
   }
+
     private handleCurrentUserChange(currentUser: IUser): void {
     this
       .personalInformationForm
       .patchValue(currentUser);
+  }
+
+  private setFormListeners(): void {
+    this
+      .personalInformationForm
+      .get('profilePicture')
+      .valueChanges
+      .subscribe(profilePicture => this.profilePicture = profilePicture);
+  }
+
+  submitPersonalInformationForm(): void {
+    const formValue = this.personalInformationForm.value;
+    this
+      .accountService
+      .updateUser(formValue)
+      .subscribe();
   }
 
 }
