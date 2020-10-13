@@ -17,12 +17,12 @@ export class AccountPersonalInformationComponent implements OnInit {
     lastName: new FormControl(),
     password: new FormControl(),
     passwordValidation: new FormControl(),
+    profilePicture: new FormControl(),
     telephone: new FormControl(),
     userName: new FormControl(),
   });
 
   profilePicture: string;
-
   constructor(
     private accountService: AccountService,
   ) {
