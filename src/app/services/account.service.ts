@@ -33,6 +33,11 @@ export class AccountService {
       this.router.navigate(['home']);
     }
   }
+
+  updateUser(user: IUser): Observable<IUser> {
+    this.currentUser.next(user);
+    return of(user);
+  }
 }
 
 
