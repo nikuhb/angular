@@ -13,3 +13,4 @@ export class AccountWishlistService {
     return of(WISHLIST_ITEMS);
   }
 }
+

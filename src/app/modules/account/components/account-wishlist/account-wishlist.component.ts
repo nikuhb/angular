@@ -29,7 +29,7 @@ export class AccountWishlistComponent implements OnInit {
 
   private handleWishListInformation(wishList: IWishlistItem[]): void {
     this
-    .wishList
-    .next(wishList);
+      .wishList
+      .next(wishList);
   }
 }
