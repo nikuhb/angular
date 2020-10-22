@@ -8,6 +8,7 @@ import { AccountVoucherComponent } from './components/account-voucher/account-vo
 import { AccountWishlistComponent } from './components/account-wishlist/account-wishlist.component';
 import { AccountLoginFormComponent } from './components/account-login-form/account-login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UiComponentsModule } from '../ui-components/ui-components.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AccountRoutingModule,
     ReactiveFormsModule,
+    UiComponentsModule,
   ]
 })
 export class AccountModule { }
