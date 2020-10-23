@@ -1,8 +1,8 @@
-<p>account-wishlist works!</p>
+<h1>Account wishlist</h1>
 
 <ng-container *ngFor="let wishListItem of (wishList | async)">
-  <div>
-    <p>{{ wishListItem.name }}</p>
-    <img src="{{ wishListItem.pictureURL }}" alt="{{ wishListItem.name }}">
-  </div>
+<app-card-picture
+[name]= "wishListItem.name"
+[picture]="wishListItem.pictureURL">
+</app-card-picture>
 </ng-container>
